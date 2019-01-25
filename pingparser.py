@@ -27,7 +27,7 @@ host_matcher = re.compile(r'PING ([a-zA-Z0-9.\-]+) *\(')
 
 # This one works on OS X output which includes the percentage in 0.0% format
 # https://regex101.com/r/nmjQzI/2
-rslt_matcher = re.compile(r'(\d+) packets transmitted, (\d+) (?:packets )?received, (\d+\.?\d*)% packet loss')
+rslt_matcher = re.compile(r'(\d+) packets transmitted, (\d+) (?:packets )?received, (?:\+\d+ errors, )?(\d+\.?\d*)% packet loss')
 
 # Pull out round-trip min/avg/max/stddev = 49.042/49.042/49.042/0.000 ms
 minmax_matcher = re.compile(r'(\d+.\d+)/(\d+.\d+)/(\d+.\d+)/(\d+.\d+)')
